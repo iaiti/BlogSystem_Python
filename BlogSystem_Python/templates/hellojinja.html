@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Bolger data</h1>
+
+	{% for info in name%}
+		<h2>BlogerID:{{info[0]}},BlogerName:{{info[1]}}  <form action="/delete?id={{info[0]}}" method="post">
+				<input type="hidden" name="name" value="a">
+              <p><button type="submit">delete</button></p>
+              </form> </h2>
+              <!-- <a href="/delete?id={{info[0]}}">delete</a> -->
+	{% endfor %}
+</body>
+</html>
